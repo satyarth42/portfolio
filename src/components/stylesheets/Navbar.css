@@ -1,0 +1,139 @@
+#bar{
+    position: fixed;
+    height: 100vh;
+    width: 55px;
+    background-color: #000000;
+    opacity: 0;
+    animation-name: navbar;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    z-index: 100;
+    top:0px;
+}
+
+@keyframes navbar{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo{
+    height : 45px;
+    width : 45px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.barelem{
+    display: flex;
+    flex-wrap: wrap;
+    width: inherit;
+    height: inherit;
+}
+
+.menu{
+    margin-top: 15vh;
+    height: inherit;
+}
+
+.menu-icons{
+    color: white;
+    margin: 10px;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 10% 10% 10% 10%;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.menu-icons:hover{
+    color:blue;
+    background-color: #1f1f1f;
+}
+
+.hamburger{
+    color: white;
+    margin: 10px;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 10% 10% 10% 10%;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    display: none;
+}
+
+.hamburger:hover{
+    color:blue;
+    background-color: #1f1f1f;
+}
+
+.toggler{
+    display: none;
+}
+
+#navigation{
+    opacity: 1;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+@media screen and (min-width:361px) and (max-width:576px){
+    #bar{
+        height: 55px;
+        width: 100vw;
+    }
+
+    .menu{
+        margin-top: 0px;
+        height: inherit;
+        position: absolute;
+        right: 5vw;
+    }
+
+
+}
+
+@media screen and (max-width:360px){
+    #bar{
+        height: 55px;
+        width: 100vw;
+    }
+
+    .menu{
+        margin-top: 0px;
+        height: inherit;
+        position: absolute;
+        right: 5vw;
+    }
+
+    .menu-icons{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        position: absolute;
+        right: 2vw;
+        z-index: 1000;
+    }
+
+
+    input[type=checkbox]:checked + .menu div .menu-icons{
+        display:block;
+    }
+
+    input[type=checkbox]:checked + .menu div{
+        margin-left: 5vw;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 85vw;
+        opacity: 1;
+    }
+}

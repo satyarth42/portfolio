@@ -1,0 +1,44 @@
+.main{
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.writeup{
+    margin: 5% 5% 10% 5%;
+}
+
+.logos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    color: white;
+    font-size: 1.2em;
+}
+
+h1{
+    color: white;
+}
+
+.skill-logo{
+    height: 80px;
+    width: 80px;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+.skill-logo:hover{
+    background-color: #7f7f7f;
+}
